@@ -1,0 +1,94 @@
+/*
+   simple.css - very simple styling for Discord Support
+   Agent pages: grey page, dark blue forms
+   User pages:  dark blue page, grey forms
+*/
+
+/* ---------- Agent theme (use <body class="agent">) ---------- */
+body.agent {
+    --page-bg: #b9bec6;      /* grey page background */
+    --page-text: #1c2333;    /* dark text on the grey page */
+    --form-bg: #1f2d52;      /* dark blue form box */
+    --form-text: #ffffff;    /* white text inside the form */
+    --button-bg: #b9bec6;    /* grey buttons on the blue form */
+    --button-text: #1c2333;
+}
+
+/* ---------- User theme (use <body class="user">) ---------- */
+body.user {
+    --page-bg: #1f2d52;      /* dark blue page background */
+    --page-text: #ffffff;    /* white text on the blue page */
+    --form-bg: #cfd3d9;      /* grey form box */
+    --form-text: #1c2333;    /* dark text inside the form */
+    --button-bg: #1f2d52;    /* blue buttons on the grey form */
+    --button-text: #ffffff;
+}
+
+/* ---------- Page layout ---------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--page-bg);
+    color: var(--page-text);
+    max-width: 700px;       /* keeps the page narrow and readable */
+    margin: 0 auto;         /* centres it */
+    padding: 24px;
+}
+
+/* Links use the page text colour so they stay readable */
+a {
+    color: var(--page-text);
+    font-weight: bold;
+}
+
+/* Lines between tickets */
+hr {
+    border: none;
+    border-top: 1px solid var(--page-text);
+    opacity: 0.3;
+    margin: 20px 0;
+}
+
+/* ---------- Forms (the coloured boxes) ---------- */
+form {
+    background: var(--form-bg);
+    color: var(--form-text);
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 8px;
+}
+
+/* ---------- Inputs inside forms ---------- */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    padding: 8px;
+    border: 1px solid #888888;
+    border-radius: 4px;
+    font-size: 15px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Text areas fill the form width */
+textarea {
+    width: 100%;
+}
+
+/* ---------- Buttons ---------- */
+input[type="submit"] {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Slightly fade a button when the mouse is over it */
+input[type="submit"]:hover {
+    opacity: 0.85;
+}
